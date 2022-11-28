@@ -1,5 +1,12 @@
 from random import choice
 
+from api.filters import TitleFilter
+from api.permissions import (IfAdminModeratorAuthorPermission, IsAdminOnly,
+                             IsStaffOrReadOnly)
+from api.serializers import (CategorySerializer, CommentSerializer,
+                             GenreSerializer, GetTitleSerializer,
+                             ReviewSerializer, SignUpSerializer,
+                             TitleSerializer, TokenSerializer, UsersSerializer)
 from django.core.mail import send_mail
 from django.db import IntegrityError
 from django.db.models import Avg
@@ -11,16 +18,9 @@ from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
-
-from api.filters import TitleFilter
-from api.permissions import (IfAdminModeratorAuthorPermission, IsAdminOnly,
-                             IsStaffOrReadOnly)
-from api.serializers import (CategorySerializer, CommentSerializer,
-                             GenreSerializer, GetTitleSerializer,
-                             ReviewSerializer, SignUpSerializer,
-                             TitleSerializer, TokenSerializer, UsersSerializer)
-from api_yamdb.settings import DEFAULT_FROM_EMAIL, PIN_RANGE
 from reviews.models import Category, CustomUser, Genre, Review, Title
+
+from api_yamdb.settings import DEFAULT_FROM_EMAIL, PIN_RANGE
 
 
 def generate_code():

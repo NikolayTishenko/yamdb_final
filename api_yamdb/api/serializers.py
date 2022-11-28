@@ -1,9 +1,9 @@
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers
-
-from api_yamdb.settings import MAX_LENGTH, MAX_LENGTH_EMAIL
 from reviews.models import Category, Comment, CustomUser, Genre, Review, Title
 from reviews.validators import validate_username
+
+from api_yamdb.settings import MAX_LENGTH, MAX_LENGTH_EMAIL
 
 
 class CategorySerializer(serializers.ModelSerializer):

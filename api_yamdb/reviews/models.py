@@ -1,11 +1,10 @@
 from django.contrib.auth.models import AbstractUser
-from django.core.validators import MaxValueValidator, MinValueValidator
-from django.core.validators import EmailValidator
+from django.core.validators import (EmailValidator, MaxValueValidator,
+                                    MinValueValidator)
 from django.db import models
-
 from reviews.validators import validate_username, validate_year
-from api_yamdb.settings import MAX_LENGTH, MAX_LENGTH_EMAIL
 
+from api_yamdb.settings import MAX_LENGTH, MAX_LENGTH_EMAIL
 
 ADMIN = 'admin'
 MODERATOR = 'moderator'
