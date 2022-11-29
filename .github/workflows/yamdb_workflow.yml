@@ -65,10 +65,10 @@ jobs:
     - name: executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
-        key: ${{ secrets.SSH_KEY }}
-        passphrase: ${{ secrets.PASSPHRASE }}
+        host: 130.193.52.93
+        username: nikolay_tishenko
+        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDu6oWMCruybiGkJubzd8yad1GWIbAL3NcfuwAMcSGIbpkh9Egl3r7P/ehTlnRYEekR+Dx8WI2X/4RHUYPlwJ6plROE1pOmEkFJCvvs+UGQYSkMEvtTg14iXx6hpHWjqTNnpUzi6owkFR9BfC5/Qr97KCd4+5jvRXaCbYppD3Bi/NRimxrlJ/9wFv9ZhhOzzagZgIJ4r3rdsqcJpkyDYqC8z24uGomVx0UFKY+0FgK1+uqzoUfuhmCH2G5MMY6VWSGEYgg3mtVfD/HH3gx5VpWu899xk5F/qJrhMVXQvAspIHTcRGXzsLtTTeI51Swlm1Ry1sDvP8aWsqrUEb7P1M/6VxNWzXrgx1BAezKki6ZlT/fLOBUlH3hr3YMkLpZD399xozfg9ZcSYiUM75wx02lFtg+IjrPU4qMOqH9pee6M+g5KZZjMygmlpJYa5Lk8zKy4fBnVC84JqMEKvMOPxLHnoZ0Ma8Is/2vKadXk6yWdkUwbzyYj0qu6iCAil7ca/sc= Nikolay_Tishenko@Samsung-880Z
+        passphrase: 8134
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
