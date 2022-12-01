@@ -1,9 +1,10 @@
 # .github/workflows/**main.yml**
 name: Django-app workflow
 
-on: 
+on:
   push:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   tests:
